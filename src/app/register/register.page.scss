@@ -1,0 +1,186 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+html, body {
+    display: block;
+    height: 100%;
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    position:relative;
+    z-index:1;
+    background-color: #ffffff;
+
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+h1, h2, h3, h4, h5, h6{font-family: 'Raleway', sans-serif;}
+img {
+    max-width: 100%;
+    height: auto;
+}
+.justify-content-between {
+    -ms-flex-pack: justify!important;
+    justify-content: space-between!important;
+}
+.d-flex {
+    display: -ms-flexbox!important;
+    display: flex!important;
+}
+.container{
+    box-sizing: border-box;
+    padding: 0px 30px;
+    width: 100%;
+}
+.body_warrper{
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    padding: 0 0 0;
+    position: relative;
+    background: #1297e0;
+}
+.header_area {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 30px 0;
+    margin: 0 0 0;
+    min-height: 175px;
+}
+.header_area .logo{
+    float: right;
+    width: 152px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.header_area .logo img{
+    width: 100%;
+    object-fit: cover;
+}
+.sign_up_area{
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+.sign_up_area:before {
+    content: '';
+    position: absolute;
+    top: -86px;
+    left: 0;
+    width: 335px;
+    height: 535px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(../../assets/images/shape1.png);
+}
+.form_area {
+    width: 228px;
+    box-sizing: border-box;
+    padding: 0 0 0;
+    margin: 0 0 0;
+    position: relative;
+}
+.form_area h1{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 0 0;
+    margin: 0 0 15px;
+    line-height: normal;
+    font-size: 28px;
+    font-weight: 600;
+    color: #1ca3ed;
+}
+.form_area h1 strong{
+    font-weight: 600;
+    color: #86be41;
+}
+.form_area h1 .create_account{
+    width: 100%;
+    box-sizing: border-box;
+    display: block;
+    color: #000000;
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 3px;
+}
+.form_area h3{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 0 0;
+    margin: 0 0 8px;
+    color: #000000;
+    font-size: 16px;
+    font-weight: 400;
+}
+.form-group{
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    margin: 0 0 12px;
+}
+.form-control {
+    width: 220px;
+    height: 40px;
+    border: 0px;
+    border-bottom: 1px solid #7f7f7f;
+    color: #3d3d3d;
+    font-size: 14px;
+    font-weight: 400;
+    background: transparent;
+    outline: none;
+    padding-left: 25px;
+}
+.form-control::placeholder{
+    color: #3d3d3d;
+    font-size: 14px;
+    font-weight: 400;
+}
+.form-group .icon{
+    content: '';
+    position: absolute;
+    top: 12px;
+    left: 0;
+}
+.text-right{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 0;
+    margin: 0 0;
+    text-align: right;
+}
+.btn {
+    color: #ffffff;
+    background: #86be41;
+    border: 1px solid #86be41;
+    font-size: 16px;
+    font-weight: 500;
+    outline: none;
+    padding: 13px 30px;
+    text-transform: uppercase;
+    border-radius: 30px;
+    box-sizing: border-box;
+}
+.already_account{
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 15px;
+}
+.already_account p {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 0;
+    margin: 0 0 0px;
+    font-size: 11px;
+    font-weight: 400;
+    color: #6c6c6c;
+}
+.btn-link{
+    font-size: 11px;
+    font-weight: 400;
+    color: #1297e0;
+    background: transparent;
+    border: none;
+    padding: 0 0 0;
+    outline: none;
+}

@@ -1,0 +1,135 @@
+<ion-app>
+  <ion-split-pane contentId="main-content">
+    <ion-menu contentId="main-content" type="overlay">
+      <ion-content (ionRefresh)="doRefresh($event)">
+        
+    <div class="body_warrper">
+
+      <div class="menu_area">
+      <div class="menu_profile">
+        <div class="w-100"  *ngIf="userDetails">
+          <div class="menu_img"><img src="assets/images/menu-icon.jpg" alt="icon" title=""></div>
+          <h1>{{response_data?.first_name}} {{response_data?.last_name}}</h1>
+          <p>{{response_data?.email}}</p>
+        </div>
+      </div>
+      <div class="menu_nav_area">
+        <ul>
+          <li>
+            <div class="menu_nav" routerLink="/" (click)="storePage('sidebar')"><i class="fas fa-home"></i> Home</div>
+          </li>
+          <li *ngIf="!userDetails">
+            <div class="menu_nav" routerLink="/login" (click)="storePage('sidebar')"><i class="fas fa-users"></i> Login</div>
+          </li>
+          <li *ngIf="!userDetails">
+            <div class="menu_nav" routerLink="/register" (click)="storePage('sidebar')"><i class="fas fa-users"></i> Registration</div>
+          </li>
+          <li  *ngIf="userDetails">
+            <div class="menu_nav"><i class="fas fa-user"></i> Profile</div>
+          </li>
+          <li>
+            <div class="menu_nav"><i class="fas fa-university"></i> Collage</div>
+          </li>
+          <li>
+            <div class="menu_nav"><i class="fas fa-graduation-cap"></i> Courses</div>
+          </li>
+          <li>
+            <div class="menu_nav"><i class="fas fa-file-alt"></i> News</div>
+          </li>
+          <li *ngIf="userDetails" >
+            <div class="menu_nav" (click)="logout()"><i class="fas fa-sign-out-alt"></i> Logout</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+      <header class="header_area">
+        <div class="container">
+          <button class="btn-back"><img src="assets/images/back.png" alt="back" title=""></button>
+          <button class="btn-nav"><img src="assets/images/navbar.png" alt="back" title=""></button>
+        </div>
+      </header>
+
+      <div class="body_area">
+        <div class="container">
+          <ul class="nav_tab">
+            <li>
+              <button class="btn-link">Featured Courses</button>
+            </li>
+            <li>
+              <button class="btn-link btn-active">Categories</button>
+            </li>
+            <li>
+              <button class="btn-link">Our Platform</button>
+            </li>
+          </ul>
+        </div>
+
+        <div class="platform_main_area">
+          <div class="container">
+            <div class="banner_area">
+              <div class="image_box">
+                <img src="assets/images/banner.png" alt="banner" title="">
+              </div>
+              <h1>Best LMS Platform to Learn Everything From One Place</h1>
+              <button class="btn">Explore Coueses</button>
+            </div>
+            <h2 class="h2">Top Listed Categories</h2>
+            <ul class="listing">
+              <li>
+                <div class="category_box bg1">
+                  <div class="w-100">
+                    <img src="assets/images/category1.png" alt="category" title="">
+                    <h3>
+                      Basic Grammers
+                      <strong>15 Courses</strong>
+                    </h3>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="category_box bg2">
+                  <div class="w-100">
+                    <img src="assets/images/category2.png" alt="category" title="">
+                    <h3>
+                      Higher Study
+                      <strong>12 Courses</strong>
+                    </h3>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="category_box bg3">
+                  <div class="w-100">
+                    <img src="assets/images/category3.png" alt="category" title="">
+                    <h3>
+                      Machine Learning
+                      <strong>05 Courses</strong>
+                    </h3>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="category_box bg4">
+                  <div class="w-100">
+                    <img src="assets/images/category4.png" alt="category" title="">
+                    <h3>
+                      Pharmacy
+                      <strong>22 Courses</strong>
+                    </h3>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>

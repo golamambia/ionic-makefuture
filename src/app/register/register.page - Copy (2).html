@@ -1,0 +1,59 @@
+ 
+<ion-content>
+
+    <div class="body_warrper">
+      <div class="container">
+        <div class="header_area">
+          <button (click)="back()"><i class="fas fa-arrow-left"></i></button>
+          <div class="logo"><img src="assets/images/inner-logo.png" alt="logo" title=""></div>
+        </div>
+      </div>
+      <div class="sign_up_area">
+        <div class="container">
+          <div class="form_area">
+            <h1>
+              <span class="create_account">Create an Account</span>
+              Make<strong>future</strong>
+            </h1>
+            <h3>Please sign up now</h3>
+            <div class="form-group">
+              <div class="icon"><img src="assets/images/icon1.png" alt="icon" title=""></div>
+              <input type="text" class="form-control" placeholder="First Name" [(ngModel)]="f_name">
+            </div>
+            <div class="form-group">
+              <div class="icon"><img src="assets/images/icon1.png" alt="icon" title=""></div>
+              <input type="text" class="form-control" placeholder="Last Name" [(ngModel)]="l_name">
+            </div>
+            <div class="form-group">
+              <div class="icon"><img src="assets/images/icon2.png" alt="icon" title=""></div>
+              <input type="text" class="form-control" placeholder="Email" [(ngModel)]="email">
+            </div>
+            <div class="form-group">
+              <div class="icon"><img src="assets/images/icon2.png" alt="icon" title=""></div>
+              <input type="text" class="form-control" [(ngModel)]="phone_number" placeholder="Mobile no" maxlength="11" (keypress)="onlyNumberKey($event)">
+            </div>
+            <div class="form-group">
+              <div class="icon"><img src="assets/images/icon3.png" alt="icon" title=""></div>
+              <input type="password" class="form-control" placeholder="Password" [(ngModel)]="password">
+            </div>
+            <div class="form-group">
+              <div class="icon"><img src="assets/images/icon3.png" alt="icon" title=""></div>
+              <input type="password" class="form-control" placeholder="Confirm Password" [(ngModel)]="password_confirmation">
+            </div>
+            <div class="form-group">
+              <div class="icon"><img src="assets/images/icon2.png" alt="icon" title=""></div>
+              <input type="text" class="form-control" [(ngModel)]="address" placeholder="Address" >
+            </div>
+            <div class="text-right">
+              <button class="btn" (click)="register()">sign up</button>
+            </div>
+            <div class="already_account">
+              <p>Already have an account?</p>
+              <button class="btn-link" routerLink="/login" (click)="storePage('register')">Sign-in</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+</ion-content>
