@@ -686,15 +686,19 @@ ul.course_listing li:nth-of-type(2n){
     color: #8dc63f;
 }
 
-.menu_nav_area{
+.menu_nav_area {
     width: 100%;
     box-sizing: border-box;
     padding: 25px 25px;
+    overflow: auto;
+    height: 100vh;
 }
 .menu_nav_area ul{
     width: 100%;
     padding: 0 0;
     margin: 0 0;
+    overflow: auto;
+    min-height: 800px;
 }
 .menu_nav_area ul li{
     padding: 0 0;

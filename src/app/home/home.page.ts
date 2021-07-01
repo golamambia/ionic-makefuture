@@ -50,12 +50,12 @@ storePage(page){
     "user_id": '',
        
   }
-    await loading.present();
+    //await loading.present();
    this.http.get(host+'home')
   .subscribe((res:any) => {
     
     res = res.json();
-    console.log(res);
+    //console.log(res);
    
      if(res.status){
        this.all_data=res;

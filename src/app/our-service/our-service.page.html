@@ -1,10 +1,10 @@
 
 <ion-content>
-
+  
     <div class="body_warrper">
       <header class="header_area">
         <div class="container">
-          <button (click)="back()" class="btn-back" ><img src="assets/images/back.png" alt="back" title=""></button>
+          <button routerLink="/sidebar" class="btn-back"><img src="assets/images/back.png" alt="back" title=""></button>
           <!-- <button class="btn-nav"><img src="assets/images/navbar.png" alt="back" title=""></button> -->
           <h2>Services</h2>
         </div>
@@ -15,36 +15,44 @@
         <div class="platform_main_area">
           <div class="main_body_area">
             <div class="container">
-              <div class="about_banner">
-                <img src="assets/images/servicebg.png" alt="servicebg" title="">
-              </div>
-              <div class="about_contain">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae risus turpis. Praesent ac mi sed massa mattis venenatis malesuada eu lacus. Nam vitae varius nisi, eget gravida augue.</p>
-              </div>
-            </div>
-            
-            <div class="portfolio_area">
-                <div class="container">
-                    <h3>Our Services</h3>
-                    <ul>
-                        <li>
-                            <div class="portfolio_box">
-                                <img src="assets/images/icon20.png">
-                                <h4>Student</h4>
-                                <p>Suspendisse sit amet erat a lorem convallis imperdiet. Sed semper,</p>
-                            </div>
-                        </li>
-                        <li>
-                        <div class="portfolio_box">
-                            <img src="assets/images/icon21.png">
-                            <h4>Franchise</h4>
-                            <p>Suspendisse sit amet erat a lorem convallis imperdiet. Sed semper,</p>
+                <div class="service_box">
+                    <div class="img_box"><img src="assets/images/service-bg1.jpg" alt="service bg" title="" /></div>
+                    <h3>Student</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pretium sem eget suscipit feugiat. Maecenas consequat viverra enim vitae hendrerit...</p>
+                    <button class="btn-link">Read More</button>
+                </div>
+                <div class="service_box">
+                    <div class="img_box"><img src="assets/images/service-bg2.jpg" alt="service bg" title="" /></div>
+                    <h3>Franchise</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pretium sem eget suscipit feugiat. Maecenas consequat viverra enim vitae hendrerit...</p>
+                    <button class="btn-link">Read More</button>
+                </div>
+                <div class="form_box">
+                    <h3>Enquiry Now</h3>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Full Name" />
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" placeholder="Email" />
+                    </div>
+                    <div class="form-group">
+                        <input type="number" class="form-control" placeholder="Phone" />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Subject" />
+                    </div>
+                    <div class="form-group">
+                        <div class="d-flex justify-content-between">
+                            <input type="text" class="form-control mr-5" placeholder="State" />
+                            <input type="text" class="form-control" placeholder="Course" />
                         </div>
-                        </li>
-                    </ul>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" placeholder="Message"></textarea>
+                    </div>
+                    <button class="btn">Submit</button>
                 </div>
             </div>
-            
           </div>
         </div>
 
