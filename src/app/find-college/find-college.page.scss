@@ -274,6 +274,8 @@ select.form-control {
     font-size: 14px;
     font-weight: 500;
     margin-right: 15px;
+    width:100%;
+    background: transparent;
 }
 .form-group:after{
     content: '';
@@ -291,3 +293,4 @@ select.form-control {
 .form-group:last-child:after{
     display: none;
 }
+

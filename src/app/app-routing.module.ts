@@ -71,11 +71,11 @@ const routes: Routes = [
     loadChildren: () => import('./apply-form/apply-form.module').then( m => m.ApplyFormPageModule)
   },
   {
-    path: 'college-details',
+    path: 'college-details/:slug',
     loadChildren: () => import('./college-details/college-details.module').then( m => m.CollegeDetailsPageModule)
   },
   {
-    path: 'course-details',
+    path: 'course-details/:slug',
     loadChildren: () => import('./course-details/course-details.module').then( m => m.CourseDetailsPageModule)
   }
 ];
