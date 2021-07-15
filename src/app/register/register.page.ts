@@ -42,7 +42,7 @@ async register(){
     });
 
 const namealrt = await this.alertController.create({
-     message: 'Please enter first name',
+     message: 'Please enter name',
       buttons: ['OK']
     });
 const lnamealrt = await this.alertController.create({
@@ -82,19 +82,23 @@ const pass_notmatch = await this.alertController.create({
      
     loading.dismiss();
     namealrt.present();
-  }else if(this.l_name == '' || this.l_name == null){
+  }
+  // else if(this.l_name == '' || this.l_name == null){
      
-    loading.dismiss();
-    lnamealrt.present();
-  }else if(this.email == '' || this.email == null){
+  //   loading.dismiss();
+  //   lnamealrt.present();
+  // }
+  else if(this.email == '' || this.email == null){
   loading.dismiss();
   emailalrt.present();
     
-  }else if(this.phone_number == '' || this.phone_number == null){
-  loading.dismiss();
-  phonealrt.present();
+  }
+  // else if(this.phone_number == '' || this.phone_number == null){
+  // loading.dismiss();
+  // phonealrt.present();
     
-  }else if(this.password == '' || this.password == null){
+  // }
+  else if(this.password == '' || this.password == null){
   loading.dismiss();
   passalrt.present();
     
@@ -107,19 +111,20 @@ const pass_notmatch = await this.alertController.create({
   loading.dismiss();
   pass_notmatch.present();
     
-  }else if(this.address != this.address){
-  loading.dismiss();
-  addressalrt.present();
-    
   }
+  // else if(this.address != this.address){
+  // loading.dismiss();
+  // addressalrt.present();
+    
+  // }
   else{
   await loading.present();
   var data ={
     "f_name": this.f_name,
     "l_name": this.l_name,
     "email": this.email,
-    "phone_number": this.phone_number,
-     "address": this.address,
+    //"phone_number": this.phone_number,
+     //"address": this.address,
     "role_id": '3',
     "password": this.password,
     "password_confirmation": this.password_confirmation,

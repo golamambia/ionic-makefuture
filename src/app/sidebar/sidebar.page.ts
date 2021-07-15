@@ -6,6 +6,7 @@ import { Storage } from '@ionic/storage';
 import { NavController } from '@ionic/angular';
 import { Component, OnInit } from '@angular/core';
 import { Location } from "@angular/common";
+import { image_path } from '../../environments/environment';
 
 @Component({
   selector: 'app-sidebar',
@@ -15,6 +16,7 @@ import { Location } from "@angular/common";
 export class SidebarPage implements OnInit {
 page:any;
  userDetails: any;
+ imag_path=image_path;
   constructor(
     private platform: Platform,
     //private splashScreen: SplashScreen,
@@ -33,7 +35,8 @@ page:any;
     // this.storage.remove("userCart");
     this.storage.get("userDetails").then(val=>{
       if(val){
-        this.userDetails = val;
+        this.userDetails = val.response_data;
+        console.log(val);
       }
     })
   }

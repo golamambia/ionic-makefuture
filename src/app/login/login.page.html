@@ -1,4 +1,11 @@
-
+ <ion-header >
+  <ion-toolbar class="toolbar-background">
+  <ion-buttons slot="start" >
+   <ion-back-button class="button-native"></ion-back-button>
+</ion-buttons>
+<!-- <ion-title class="toolbar-title">Create an Account</ion-title> -->
+  </ion-toolbar>
+</ion-header> 
 <ion-content>
   
     <div class="body_warrper">
@@ -17,21 +24,21 @@
             <h3>Please signin to continue</h3>
             <div class="form-group">
               <div class="icon"><img src="assets/images/icon2.png" alt="icon" title=""></div>
-              <input type="email" class="form-control" placeholder="Enter your Email">
+              <input type="email" class="form-control" placeholder="Enter your Email" [(ngModel)]="email">
             </div>
             <div class="form-group mb-15">
               <div class="icon"><img src="assets/images/icon3.png" alt="icon" title=""></div>
-              <input type="text" class="form-control" placeholder="Enter your Password">
+              <input type="password" class="form-control" placeholder="Enter your Password" [(ngModel)]="password">
             </div>
             <div class="forgot_passwerd_box">
               <button class="btn-link">Forgot Password?</button>
             </div>
             <div class="text-right">
-              <button class="btn">login</button>
+              <button class="btn" (click)="login()">login</button>
             </div>
             <div class="already_account">
               <p>Don't have an account?</p>
-              <button routerLink="register" class="btn-link">Sign Up</button>
+              <button routerLink="/register" class="btn-link">Sign Up</button>
             </div>
           </div>
         </div>

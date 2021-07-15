@@ -6,9 +6,14 @@
         <div class="menu_area">
       <div class="menu_profile">
         <div class="w-100">
-          <div class="menu_img"><img src="assets/images/menu-icon.jpg" alt="icon" title=""></div>
-          <h1>john doe</h1>
-          <p>johndoe@yourdomain.com</p>
+          <div class="menu_img" *ngIf="!userDetails?.avatar">
+            <img src="assets/images/menu-icon.jpg" alt="icon" title="">
+          </div>
+          <div class="menu_img" *ngIf="userDetails?.avatar">
+           <img src="{{imag_path + userDetails?.avatar}}" alt="">
+          </div>
+          <h1>{{userDetails?.first_name}}</h1>
+          <p>{{userDetails?.email}}</p>
         </div>
       </div>
       <div class="menu_nav_area">
@@ -39,11 +44,23 @@
           </li>
           
           <li routerLink="/contact">
-            <div class="menu_nav"><i class="fas fa-file-alt"></i> Contact Us</div>
+            <div class="menu_nav"><i class="far fa-address-book"></i> Contact Us</div>
           </li>
-         <!--  <li>
+          <li *ngIf="userDetails" routerLink="/profile">
+            <div class="menu_nav"><i class="fas fa-user"></i>Profile</div>
+          </li>
+          <li *ngIf="userDetails" routerLink="/change-password">
+            <div class="menu_nav"><i class="fas fa-lock"></i>Change password</div>
+          </li>
+          <li *ngIf="!userDetails" routerLink="/login">
+            <div class="menu_nav"><i class="fas fa-sign-in-alt"></i>Login</div>
+          </li>
+          <li *ngIf="!userDetails" routerLink="/register">
+            <div class="menu_nav"><i class="fas fa-user-plus"></i>Sign up</div>
+          </li>
+         <li *ngIf="userDetails" (click)="logout()">
             <div class="menu_nav"><i class="fas fa-sign-out-alt"></i> Logout</div>
-          </li> -->
+          </li>
         </ul>
       </div>
     </div>

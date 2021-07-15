@@ -1,61 +1,123 @@
-
+ <ion-header >
+  <ion-toolbar class="toolbar-background">
+  <ion-buttons slot="start" >
+   <ion-back-button class="button-native"></ion-back-button>
+</ion-buttons>
+<ion-title class="toolbar-title">About us</ion-title>
+  </ion-toolbar>
+</ion-header>
 <ion-content>
-
+  
     <div class="body_warrper">
-      <header class="header_area">
-        <div class="container">
-          <button routerLink="/sidebar" class="btn-back"><img src="assets/images/back.png" alt="back" title=""></button>
-          <!-- <button class="btn-nav"><img src="assets/images/navbar.png" alt="back" title=""></button> -->
-          <h2>about us</h2>
-        </div>
-      </header>
-
-      <div class="body_area">
-
-        <div class="platform_main_area">
-          <div class="main_body_area">
+        <!-- <header class="header_area">
             <div class="container">
-              <div class="about_banner">
-                <img src="assets/images/about-banner.jpg" alt="about banner" title="">
-              </div>
-              <div class="about_contain">
-                <h1>What is <strong class="bg1">Make</strong><strong class="bg2">future</strong>?</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae risus turpis. Praesent ac mi sed massa mattis venenatis malesuada eu lacus. Nam vitae varius nisi, eget gravida augue.</p>
-              </div>
-              <div class="about_course_box">
-                <div class="icon_box"><img src="assets/images/icon13.png" alt="about icon" title=""></div>
-                <h3>Over 5,000 Online Courses</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae risus turpis. nisi, eget gravida augue.</p>
-              </div>
-              <div class="about_course_box">
-                <div class="icon_box"><img src="assets/images/icon14.png" alt="about icon" title=""></div>
-                <h3>Well Certified Instructors</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae risus turpis. nisi, eget gravida augue.</p>
-              </div>
-              <div class="about_course_box">
-                <div class="icon_box"><img src="assets/images/icon15.png" alt="about icon" title=""></div>
-                <h3>Lifetime Access Gurantee</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae risus turpis. nisi, eget gravida augue.</p>
-              </div>
-              <h3 class="h3">latest news</h3>
-              <div class="news_box">
-                <div class="image_box"><img src="assets/images/news1.jpg" alt="news" alt=""></div>
-                <div class="news_tag bg3">Education</div>
-                <h4>Lorem ipsum dolor sit amet, conse ctetur</h4>
-                <h5>Luke Cage - 3 hours ago</h5>
-              </div>
-              <div class="news_box">
-                <div class="image_box"><img src="assets/images/news2.jpg" alt="news" alt=""></div>
-                <div class="news_tag bg4">School</div>
-                <h4>Lorem ipsum dolor sit amet, conse ctetur</h4>
-                <h5>Luke Cage - 3 hours ago</h5>
-              </div>
+                <button class="btn-back"><img src="images/back.png" alt="back" title=""></button>
+                <button class="btn-nav"><img src="images/navbar.png" alt="back" title=""></button>
+                <h2>about us</h2>
             </div>
-          </div>
-        </div>
+        </header> -->
 
-      </div>
+        <div class="body_area">
+
+            <div class="platform_main_area">
+                <div class="main_body_area">
+                    <div class="container">
+                      
+
+                      <div *ngFor="let a of data_about">
+                                              
+                       <div class="vision_area" *ngIf="a.type==2">
+                        
+                            <div class="img_box" style="height: auto;">
+                                <img src="{{image_path + a.image2}}" alt="vision" title="" />
+                            </div>
+                            <h3 [innerHtml]="a.title">
+                        
+                      </h3>
+                            <div [innerHtml]="a.body"></div>
+                        </div>
+                       
+                        <div class="vision_area" *ngIf="a.type==3">
+                        
+                            <div class="img_box">
+                                <img src="{{image_path + a.image}}" alt="vision" title="" />
+                            </div>
+                            <h3 [innerHtml]="a.title">
+                        
+                      </h3>
+                            <div [innerHtml]="a.body"></div>
+                        </div>
+
+                        
+                        <div class="vision_area" *ngIf="a.type==4">
+                            <div class="img_box">
+                                <img src="{{image_path + a.image}}" alt="vision" title="" />
+                                <div class="video-main">
+                                    <div class="promo-video">
+                                        <div class="waves-block">
+                                            <div class="waves wave-1"></div>
+                                            <div class="waves wave-2"></div>
+                                            <div class="waves wave-3"></div>
+                                        </div>
+                                    </div>
+
+                                    <a data-fancybox="" href="{{a.btn_url}}" class="video video-popup mfp-iframe" data-lity=""><i class="fa fa-play"></i></a>
+                                </div>
+                            </div>
+                            <h3 [innerHtml]="a.title">
+                        
+                      </h3>
+                            <div [innerHtml]="a.body"></div>
+                        </div>
+                         </div>
+
+                    </div>
+                    <div class="our_partner_area">
+                        <div class="container">
+                            <h3>Our Partners</h3>
+                            <div class="partner_carasal">
+                                <div class="owl-carousel ourpartners-carousel">
+
+                                    <div class="partner_box" *ngFor="let p of partner">
+                                     
+ <img src="{{image_path + p.image}}" alt=" partner image" title="" />
+                                        
+                                    </div>
+                                    
+                                </div>
+                               <!--  <div class="partner_nav">
+                                    <button class="btn"></button>
+                                    <button class="btn active"></button>
+                                    <button class="btn"></button>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio_area">
+                        <div class="container">
+                            <h3>Our Portfolio</h3>
+                            <ul>
+                                                    <div *ngFor="let a of data_about">
+                                <li *ngIf="a.type==7">
+                                    <div class="portfolio_img_box">
+                                      <a href="{{image_path + a.image}}" data-fancybox="images" data-caption="My caption">
+<img src="{{image_path + a.image}}">
+</a>
+                                       
+                                    </div>
+                                </li>
+                              </div>
+                                
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
 
     </div>
-  
+
 </ion-content>
